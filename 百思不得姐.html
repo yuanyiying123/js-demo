@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    a{
+        text-decoration: none;
+    }
+    .nav{
+        height: 60px;
+        width: 100%;
+        background-color: rgb(229,5,65);
+    }
+    .inner{
+        height: 100%;
+        width:1150px;
+        margin: 0 auto;
+    }
+    .inner>img{
+        float: left;
+    }
+    .inner>ul>li{
+        height: 100%;
+        width:32px;
+        color: white;
+        margin-right: 20px;
+        float: left;
+        font-size: 16px;
+        line-height: 60px;
+        padding:0 15px;
+    }
+    .inner>ul>li:nth-of-type(1){
+        margin-left: 18px;
+        background-color: rgb(160,3,45)
+    }
+    .right{
+        width: 91px;
+        height: 100%;
+        float: right;
+        display: flex;
+        align-items:center;
+    }
+    .right>a{
+        color: white;
+        font-size: 12px;
+        display: inline-block;
+        margin:0 10px;
+        height: 14px;
+    }
+    .content{
+        width:960px;
+        /* height: 1000px; */
+        margin: 0 auto;
+        
+    }
+    .textBox{
+        width:650px;
+        padding:0 20px;
+        height: 100%;
+        border:1px solid #e8e8e8;
+        margin-top: 20px;
+    }
+    .head{
+        width:100%;
+        height: 40px;
+        border-bottom: 1px solid rgb(231, 231, 231);
+    }
+    .head>a{
+        line-height: 40px;
+        font-size: 16px;
+        margin-right: 30px;
+    }
+    .head>a:nth-of-type(1){
+        color: red;
+    }
+    .head>a:nth-of-type(2):hover{
+        color: red;
+    }
+    .textBox>ul>li{
+        width: 100%;
+        /* height: 800px; */
+        border-bottom: 1px solid rgb(231, 231, 231);
+        padding-bottom: 20px;
+    }
+    .textBox>ul>li>div:nth-of-type(1){
+        width:100%;
+        height: 30px;
+        padding:20px 0 10px;
+    }
+    .textBox>ul>li>div:nth-of-type(1)>img{
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        float: left;
+    }
+    .textBox>ul>li>div:nth-of-type(1)>div{
+        height: 100%;
+        width:570px;
+        float: left;
+    }
+    .textBox>ul>li>div:nth-of-type(1)>div>span:nth-of-type(1){
+        float: left;
+        font-size: 16px;
+        line-height: 30px;
+        margin-left: 10px;
+    }
+    .textBox>ul>li>div:nth-of-type(1)>div>span:nth-of-type(2){
+        float: right;
+        font-size: 16px;
+        line-height: 30px;
+        color: grey;
+    }
+    .textBox>ul>li>a{
+        display: inline-block;
+        height: 25px;
+        width:565px;
+        margin-left: 40px;
+        font-size: 15px;
+    }
+    .textBox>ul>li>div:last-child>img{
+       width:540px;
+       margin-left: 30px;
+       padding-top: 20px;
+       
+    }
+    .pageindex{
+        width:650px;
+        height: 30px;
+        padding: 20px 0;
+        float: left;
+        display: flex;
+        justify-content: center;
+    }
+    .pageindex>ul>li{
+        display: inline-block;
+        height: 30px;
+        width:30px;
+        border:1px solid deeppink;
+        background-color: white;
+        color:black;
+        text-align: center;
+        line-height: 30px;
+        margin:10px 0;
+        margin-top: 0;
+    }
+    .pageindex>ul>li:nth-of-type(1){
+        background-color: deeppink;
+        color:white;
+    }
+    .pageindex>ul>li:hover{
+        background-color: deeppink;
+        color:white;
+    }
+    .pageindex>a{
+        display: inline-block;
+        vertical-align: bottom;
+        border:1px solid grey;
+        margin-right: 10px;
+        text-align: center;
+        line-height: 30px;
+        padding:0 10px;
+    }
+    .pageindex>a:nth-of-type(1){
+  margin-left: 10px;
+    }
+    .pageindex>i{
+        text-align: center;
+        margin-left: 10px;
+    }
+    input{
+        width:50px;
+        border-right: none;
+    }
+    .pageindex>a:nth-of-type(2){
+        border-left: none;
+        background-color: rgb(199, 198, 198);
+    }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="inner">
+            <img src="logo_new.png" alt="">
+            <ul>
+                <li>全部</li>
+                <li>图片</li>
+                <li>声音</li>
+                <li>排行</li>
+            </ul>
+            <div class="right"><a>登录</a><a>注册</a></div>
+        </div>
+    </div>
+     <div class="content">
+         <div class="textBox">
+             <div class="head"><a>精华</a><a>穿越</a></div>
+              <ul id='container'> </ul>
+           </div>
+           <div class="pageindex">
+                <ul id='indexx'>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li>
+                    <li>5</li>
+                </ul>
+                <i>...</i>
+                <a>下一页</a>
+                <input type="text">
+                <a>跳</a>
+            </div> 
+       </div> 
+             
+        
+         
+        
+       <script src='../lib/jquery.js'></script>
+    <script>
+     var box=document.getElementById('container')   
+    window.onload=function(){
+       var addres="https://www.apiopen.top/satinApi"
+       var xhr=new XMLHttpRequest()
+      xhr.onreadystatechange=function(){
+        if(xhr.readyState==4 && xhr.status==200){
+            var data=xhr.responseText
+            data=JSON.parse(data).data
+            console.log(data)
+            var str=''
+          data.forEach(function(item,index){
+              str+=`
+              <li>
+                 <div>
+                     <img src="${item.profile_image}" alt="">
+                     <div>
+                         <span>${item.name}</span>
+                         <span>${item.passtime}</span>
+                     </div>
+                 </div>
+                 <a>${item.text}</a>
+                 <div><img src='${item.cdn_img}'></div>
+             </li>
+              `
+          })
+          box.innerHTML=str
+
+          
+        }
+        }
+        xhr.open('get',addres+'?type=1&page=2')
+        xhr.send(null)
+    }
+    $('#indexx').children().on('click',function(){
+        var addres="https://www.apiopen.top/satinApi"
+       var xhr=new XMLHttpRequest()
+      xhr.onreadystatechange=function(){
+        if(xhr.readyState==4 && xhr.status==200){
+            var data=xhr.responseText
+            data=JSON.parse(data).data
+            console.log(data)
+            var str=''
+          data.forEach(function(item,index){
+              str+=`
+              <li>
+                 <div>
+                     <img src="${item.profile_image}" alt="">
+                     <div>
+                         <span>${item.name}</span>
+                         <span>${item.passtime}</span>
+                     </div>
+                 </div>
+                 <a>${item.text}</a>
+                 <div><img src='${item.cdn_img}'></div>
+             </li>
+              `
+          })
+          box.innerHTML=str
+
+          
+        }
+        }
+        xhr.open('get',addres+'?type=1&page='+this.value)
+        xhr.send(null)
+       
+     })
+     $("input").on('focus',function(){
+       
+        var addres="https://www.apiopen.top/satinApi"
+       var xhr=new XMLHttpRequest()
+      xhr.onreadystatechange=function(){
+        if(xhr.readyState==4 && xhr.status==200){
+            var data=xhr.responseText
+            data=JSON.parse(data).data
+            console.log(data)
+            var str=''
+          data.forEach(function(item,index){
+              str+=`
+              <li>
+                 <div>
+                     <img src="${item.profile_image}" alt="">
+                     <div>
+                         <span>${item.name}</span>
+                         <span>${item.passtime}</span>
+                     </div>
+                 </div>
+                 <a>${item.text}</a>
+                 <div><img src='${item.cdn_img}'></div>
+             </li>
+              `
+          })
+          box.innerHTML=str
+
+          
+        }
+        }
+        xhr.open('get',addres+'?type=1&page='+this.value)
+        xhr.send(null)
+     })
+    
+    </script>
+</body>
+</html>
